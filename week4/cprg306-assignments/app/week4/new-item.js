@@ -1,9 +1,6 @@
 'use strict';
 import React, {useState} from 'react';//add "use client" directive
 
-// Mark Home component as a client entry with "use client"
-export const useClient = true;
-
 function NewItem() {
     // Initialize State Variables
     const [name, setName] = useState('');

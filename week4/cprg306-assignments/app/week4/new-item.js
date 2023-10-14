@@ -1,5 +1,5 @@
-'use strict';
-import React, {useState} from 'react';//add "use client" directive
+'use client';
+import React, {useState} from 'react';
 
 function NewItem() {
     // Initialize State Variables
@@ -24,7 +24,7 @@ function NewItem() {
 
     return (
         <div>
-            <h2>New Item Component</h2>
+            <h2>New Item</h2>
             <form onSubmit={handleSubmit}>
                 <label>
                     Name:

@@ -1,3 +1,4 @@
+
 import Image from 'next/image'
 import React from 'react';
 import NewItem from './week4/new-item';

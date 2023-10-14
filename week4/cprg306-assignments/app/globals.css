@@ -16,10 +16,6 @@
   }
 }
 
-* {
-  font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif, sans-serif;
-}
-
 body {
   color: var(--text-color);
   background: linear-gradient(to bottom, var(--bg-color-start), var(--bg-color-end));

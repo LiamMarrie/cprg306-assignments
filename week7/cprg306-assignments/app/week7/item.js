@@ -19,9 +19,8 @@ function Item({ name, quantity, category, onSelect }){
             MozUserSelect: 'none',
             WebkitUserSelect: 'none',
             msUserSelect: 'none',
-            width: '25%',
-
-            
+            width: '50%',
+            cursor: 'pointer'            
         }}
         onClick={handleClick} // make item in list clickable
         >

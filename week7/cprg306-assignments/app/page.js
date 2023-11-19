@@ -32,9 +32,6 @@ export default function Home() {
         }}>Shopping List</h1>
       </div>
       <div>
-        <MealIdeas />
-      </div>
-      <div>
         <Page />
       </div>
     </main>

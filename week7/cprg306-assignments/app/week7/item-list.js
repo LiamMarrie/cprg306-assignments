@@ -1,12 +1,11 @@
-/*
+// Import React and necessary hooks
 'use strict';
 'use client';
 import React, { useState } from 'react';
 import Item from './item';
-import items from './items.json';
 
 // Define the ItemList functional component
-function ItemList({ onItemSelect }) {
+function ItemList({ items, onItemSelect }) {
   const [sortBy, setSortBy] = useState('name');
 
   const sortedItems = [...items].sort((a, b) => {
@@ -76,50 +75,6 @@ function ItemList({ onItemSelect }) {
             name={item.name}
             quantity={item.quantity}
             category={item.category}
-            onSelect={() => onItemSelect(item)} // Pass onSelect prop to each Item
-          />
-        ))}
-      </ul>
-    </div>
-  );
-}
-
-export default ItemList;
-*/
-'use strict';
-'use client';
-import React, { useState } from 'react';
-import Item from './item';
-
-function ItemList({ items, onItemSelect }) {
-  const [sortBy, setSortBy] = useState('name');
-
-  const sortedItems = [...items].sort((a, b) => {
-    if (sortBy === 'name') {
-      return a.name.localeCompare(b.name);
-    } else if (sortBy === 'category') {
-      return a.category.localeCompare(b.category);
-    } else if (sortBy === 'quantity') {
-      return a.quantity - b.quantity;
-    }
-    return 0;
-  });
-
-  return (
-    <div>
-      {/* Sorting buttons */}
-      <button onClick={() => setSortBy('name')}>Name</button>
-      <button onClick={() => setSortBy('category')}>Category</button>
-      <button onClick={() => setSortBy('quantity')}>Quantity</button>
-
-      {/* Render the sorted items */}
-      <ul>
-        {sortedItems.map((item) => (
-          <Item
-            key={item.id}
-            name={item.name}
-            quantity={item.quantity}
-            category={item.category}
             onSelect={() => onItemSelect(item.name)} // Pass onSelect prop to each Item
           />
         ))}
@@ -129,4 +84,3 @@ function ItemList({ items, onItemSelect }) {
 }
 
 export default ItemList;
-

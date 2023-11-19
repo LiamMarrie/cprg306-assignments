@@ -2,7 +2,7 @@
 'use client';
 import React, { useState } from 'react';
 
-function NewItem({onAddItem}) {
+function NewItem({ onAddItem }) {
   const [name, setName] = useState('');
   const [quantity, setQuantity] = useState(1);
   const [category, setCategory] = useState('Produce');
@@ -10,7 +10,7 @@ function NewItem({onAddItem}) {
   const handleSubmit = (e) => {
     e.preventDefault();
     const newItem = { name, quantity, category };
-    onAddItem(newItem); // Call the onAddItem function passed from the parent component
+    onAddItem(newItem); // Invoke the onAddItem prop with the item object
     setName('');
     setQuantity(1);
     setCategory('Produce');

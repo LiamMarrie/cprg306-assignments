@@ -1,4 +1,4 @@
-// app/week8/layout.js
+'use client';
 import { AuthContextProvider } from "./_utils/auth-context";
 
 const Layout = ({ children }) => {

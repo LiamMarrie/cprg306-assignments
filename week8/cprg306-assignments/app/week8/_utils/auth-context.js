@@ -1,6 +1,5 @@
-// app/week8/_utils/auth-context.js
-"use client";
-
+"use strict";
+'use client';
 import { useContext, createContext, useState, useEffect } from "react";
 import {
   signInWithPopup,
@@ -29,7 +28,7 @@ export const AuthContextProvider = ({ children }) => {
       setUser(currentUser);
     });
     return () => unsubscribe();
-  }, []);
+  }, [user]);
 
   return (
     <AuthContext.Provider value={{ user, gitHubSignIn, firebaseSignOut }}>
